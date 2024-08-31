@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="headerFlex">
+            <h1>SR Calculator</h1>
+            <p class="subFlex" style="font-style:italic;">Square/Rectangle Calculator</p>
+        </div>
+        
+        <div class="headerFlex">
+            <h4>Welcome to calculator</h4>
+            <p class="subFlex">This website is meant to calculate the area and the perimeter
+            of a square/rectangle in order to finish a mini project from RevoU</p>
+        </div>
+    </header>
+    <div class="flexColumn">
+        <p>Choose which shape you want to calculate!</p>
+        <div class="flexRow subFlex">
+            <button class="buttonRow buttonMode square" type="button" onclick="changeClassButtonMode('square')" id="defaultMode">square</button>
+            <button class="buttonRow buttonMode rectangle" type="button" onclick="changeClassButtonMode('rectangle')" id="changedMode">Rectangles</button>
+        </div>
+    </div>
+    <br>
+
+    <div class="flexColumn mainBody">
+        <div class="flexRow rowTitle">
+            <h1 class="buttonMethod" id="shapeName">Square</h1>
+            <button class="buttonMethod" onclick="changeClassButtonMethod()" id="buttonChangeMethod">area <span style="float: right; color: #AD4326;">Switch</span></button>
+        </div>
+
+        <br>
+
+        <div class="box square" id="box"></div>
+        <p id="sentenceFormula">The formula for counting the area of a Square is:</p>
+        <p id="formula">A = S x S</p>
+
+        <div class="horizontalLine"></div>
+
+        <div class="flexColumn">
+            <h2 id="calculateTitle">Calculate The Area of a Square</h2>
+            <form class="flexColumn" id="inputDiv">
+                <input class="inputBox" type="number" placeholder="Side Length" id="inputLength">
+            </form>
+            <div id="resultCalculation">
+                
+            </div>
+            <div class="flexRow" style="gap: 10px;">
+                <button class="endButton" onclick="calculate()" id="calculateButton">Calculate</button>
+                <button class="endButton" onclick="reset()">Reset</button>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+<script src="./js/script.js"></script>
+</html>
