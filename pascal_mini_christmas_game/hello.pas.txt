@@ -1,0 +1,1873 @@
+program selamatNatalSemuanya;
+uses crt;
+var x,y, option,christmasloop,w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,w12,w13,w14,w15,w16,w17,w18,w19,w20,w21,w22,w23,w24,w25,w26,w27,w28,w29,w30,w31,w32,w33,w34,w35,w36,w37,w38,w39,w40,w41,w42,w43,w44,w45,w46,w47,w48,w49,w50,w51,w52,w53,w54,w55:integer; ditarik, tryagain, answer, nama:string; damage1, damage2, damage3, damage4, damage5, damage6:real;
+char1,char2,char3,char4,char5,char6,char7,char8,char9,char10,char11,char12,char13,char14,char15,char16,char17,char18,char19,char20,char21,char22,char23,char24,char25,char26,char27,char28,char29,char30,char31,char32,char33,char34,char35,char36,char37,char38,char39,char40,char41,char42,char43,char44,char45,char46,char47,char48,char49,char50,char51,char52,char53,char54,char55:char;
+label quit, disclaimer, disclaimer2, countdown, opening1, opening2, animation1, start, action1, action1_1, action1_2, action1_3, action2from1,
+action2from1_1, action2from1_2, action2from1_3, action2from2, action2from2_1, action2from2_2, action2from2_3, action2from3, action2from3_1,
+action2from3_2, action2from3_3, action3from1, action3from1_1, action3from1_2, action3from1_3, action3from3, merrychristmas;
+
+begin
+  clrscr;
+disclaimer:
+  writeln('================================================================================'); //80 max each line
+  gotoxy(35,2);
+  writeln('DISCLAIMER'); //10
+  gotoxy(10,3);
+  writeln('Program ini lebih baik untuk ditampilkan pada device laptop'); //59
+  gotoxy(19,4);
+  writeln('Apabila ditampilkan pada device handphone,'); //42
+  gotoxy(8,5);
+  writeln('Ada kemungkinan bahwa program tidak dapat ditampilkan dengan baik'); //65
+  gotoxy(1,6);
+  writeln('Direkomendasikan untuk membesarkan layar output/console, yang ada di bawah layar'); //80
+  gotoxy(18,7);
+  writeln('Dengan cara menarik ke atas garis perbatasan,'); //45
+  gotoxy(5,8);
+  writeln('Yang berada di antara tempat program dituliskan dengan console, ke atas'); //71
+  gotoxy(10,9);
+  writeln('Disarankan untuk menggunakan tampian perbesaran sebesar 90%'); //59
+  gotoxy(13,10);
+  writeln('Hal ini dapat dilakukan dengan menggunakan [CTRL + -]'); //53
+  gotoxy(23,11);
+  writeln('Terima Kasih dan Selamat Menikmati'); //34
+  gotoxy(1,12);
+  writeln('================================================================================');
+  gotoxy(18,13);
+  writeln('Made by: zelig, and some help by friends :D'); //43
+  delay(6000);
+  goto disclaimer2;
+  
+disclaimer2:
+  clrscr;
+  writeln('================================================================================'); //80 max each line
+  gotoxy(35,2);
+  writeln('DISCLAIMER'); //10
+  gotoxy(10,3);
+  writeln('Program ini lebih baik untuk ditampilkan pada device laptop'); //59
+  gotoxy(19,4);
+  writeln('Apabila ditampilkan pada device handphone,'); //42
+  gotoxy(8,5);
+  writeln('Ada kemungkinan bahwa program tidak dapat ditampilkan dengan baik'); //65
+  gotoxy(1,6);
+  writeln('Direkomendasikan untuk membesarkan layar output/console, yang ada di bawah layar'); //80
+  gotoxy(18,7);
+  writeln('Dengan cara menarik ke atas garis perbatasan,'); //45
+  gotoxy(5,8);
+  writeln('Yang berada di antara tempat program dituliskan dengan console, ke atas'); //71
+  gotoxy(10,9);
+  writeln('Disarankan untuk menggunakan tampian perbesaran sebesar 90%'); //59
+  gotoxy(13,10);
+  writeln('Hal ini dapat dilakukan dengan menggunakan [CTRL + -]'); //53
+  gotoxy(23,11);
+  writeln('Terima Kasih dan Selamat Menikmati'); //34
+  gotoxy(1,12);
+  writeln('================================================================================');
+  gotoxy(18,13);
+  writeln('Made by: zelig, and some help by friends :D'); //43
+  goto countdown;
+  
+countdown:
+  gotoxy(1,15);
+  delay(4000);
+  write('Tampilan akan menghilang dalam: ');
+  for x:=10 downto 0 do
+  begin
+    gotoxy(33,15);
+    write(x, ' ');
+    delay(1000);
+  end;
+  
+  {
+  gotoxy(33, 15);
+  write('10');
+  gotoxy(33, 15);
+  delay(1000);
+  write('9 ');
+  gotoxy(33, 15);
+  delay(1000);
+  write('8');
+  gotoxy(33, 15);
+  delay(1000);
+  write('7');
+  gotoxy(33, 15);
+  delay(1000);
+  write('6');
+  gotoxy(33, 15);
+  delay(1000);
+  write('5');
+  gotoxy(33, 15);
+  delay(1000);
+  write('4');
+  gotoxy(33, 15);
+  delay(1000);
+  write('3');
+  gotoxy(33, 15);
+  delay(1000);
+  write('2');
+  gotoxy(33, 15);
+  delay(1000);
+  write('1');
+  gotoxy(33, 15);
+  delay(1000);
+  write('0');
+  delay(1000);
+  }
+  
+  goto opening1;
+  
+opening1:
+  clrscr;
+  delay(1000);
+  writeln('Halo semuanya!');
+  delay(2500);
+  writeln('Pasti semuanya sudah tahu kan ini buat apa :D');
+  delay(2500);
+  writeln('Tapi sebelumnya, saya minta tolong dong');
+  delay(2500);
+  writeln('Itu yang di atas');
+  goto animation1;
+  
+animation1:
+  for y:=2 to 9 do 
+    begin
+      delay(1000);
+      clrscr;
+      textcolor(23);
+      gotoxy(1,y);
+      writeln('Halo semuanya!');
+      writeln('Pasti semuanya sudah tahu kan ini buat apa :D');
+      writeln('Tapi sebelumnya, saya minta tolong dong');
+      writeln('Itu yang di atas'); //IF is needed or mayhaps while is probably better 
+
+    if y=4 then
+      begin
+        textcolor(14);
+        gotoxy(5,1);
+        write('*');
+        gotoxy(12,1);
+        write('*');
+        gotoxy(19,1);
+        write('*');
+      end
+    else if y=5 then
+      begin
+        textcolor(14);
+        gotoxy(5,1);
+        write('*');
+        gotoxy(4,2);
+        write('*');
+        gotoxy(5,2);
+        write('|');
+        gotoxy(6,2);
+        write('*');
+        gotoxy(12,1);
+        write('*');
+        gotoxy(11,2);
+        write('*');
+        gotoxy(12,2);
+        write('|');
+        gotoxy(13,2);
+        write('*');
+        gotoxy(19,1);
+        write('*');
+        gotoxy(18,2);
+        write('*');
+        gotoxy(19,2);
+        write('|');
+        gotoxy(20,2);
+        write('*');
+      end
+    else if y=6 then
+      begin
+        textcolor(14);
+        gotoxy(19,1);
+        write('*');  
+        gotoxy(18,2);
+        write('*');
+        gotoxy(19,2);
+        write('|');
+        gotoxy(20,2);
+        write('*');
+        gotoxy(17,3);
+        write('*');
+        gotoxy(19,3);
+        write('|');
+        gotoxy(21,3);
+        write('*');
+        gotoxy(12,1);
+        write('*');
+        gotoxy(11,2);
+        write('*');
+        gotoxy(12,2);
+        write('|');
+        gotoxy(13,2);
+        write('*');
+        gotoxy(10,3);
+        write('*');
+        gotoxy(12,3);
+        write('|');
+        gotoxy(14,3);
+        write('*');
+        gotoxy(5,1);
+        write('*');
+        gotoxy(4,2);
+        write('*');
+        gotoxy(5,2);
+        write('|');
+        gotoxy(6,2);
+        write('*');
+        gotoxy(3,3);
+        write('*');
+        gotoxy(5,3);
+        write('|');
+        gotoxy(7,3);
+        write('*');
+      end
+    else if y=7 then
+      begin
+        textcolor(14);
+        gotoxy(5,1);
+        write('*');
+        gotoxy(4,2);
+        write('*');
+        gotoxy(5,2);
+        write('|');
+        gotoxy(6,2);
+        write('*');
+        gotoxy(3,3);
+        write('*');
+        gotoxy(5,3);
+        write('|');
+        gotoxy(7,3);
+        write('*');
+        gotoxy(5,4);
+        write('|');
+        gotoxy(12,1);
+        write('*');
+        gotoxy(11,2);
+        write('*');
+        gotoxy(12,2);
+        write('|');
+        gotoxy(13,2);
+        write('*');
+        gotoxy(10,3);
+        write('*');
+        gotoxy(12,3);
+        write('|');
+        gotoxy(14,3);
+        write('*');
+        gotoxy(12,4);
+        write('|');
+        gotoxy(19,1);
+        write('*');
+        gotoxy(18,2);
+        write('*');
+        gotoxy(19,2);
+        write('|');
+        gotoxy(20,2);
+        write('*');
+        gotoxy(17,3);
+        write('*');
+        gotoxy(19,3);
+        write('|');
+        gotoxy(21,3);
+        write('*');
+        gotoxy(19,4);
+        write('|');
+      end
+    else if y=8 then
+      begin
+        textcolor(14);
+        gotoxy(19,1);
+        write('*');
+        gotoxy(18,2);
+        write('*');
+        gotoxy(19,2);
+        write('|');
+        gotoxy(20,2);
+        write('*');
+        gotoxy(17,3);
+        write('*');
+        gotoxy(19,3);
+        write('|');
+        gotoxy(21,3);
+        write('*');
+        gotoxy(19,4);
+        write('|');
+        gotoxy(19,5);
+        write('|');
+        gotoxy(12,1);
+        write('*');
+        gotoxy(11,2);
+        write('*');
+        gotoxy(12,2);
+        write('|');
+        gotoxy(13,2);
+        write('*');
+        gotoxy(10,3);
+        write('*');
+        gotoxy(12,3);
+        write('|');
+        gotoxy(14,3);
+        write('*');
+        gotoxy(12,4);
+        write('|');
+        gotoxy(12,5);
+        write('|');
+        gotoxy(5,1);
+        write('*');
+        gotoxy(4,2);
+        write('*');
+        gotoxy(5,2);
+        write('|');
+        gotoxy(6,2);
+        write('*');
+        gotoxy(3,3);
+        write('*');
+        gotoxy(5,3);
+        write('|');
+        gotoxy(7,3);
+        write('*');
+        gotoxy(5,4);
+        write('|');
+        gotoxy(5,5);
+        write('|');
+      end
+    else if y=9 then
+      begin 
+        textcolor(14);
+        gotoxy(5,1);
+        write('*');
+        gotoxy(4,2);
+        write('*');
+        gotoxy(5,2);
+        write('|');
+        gotoxy(6,2);
+        write('*');
+        gotoxy(3,3);
+        write('*');
+        gotoxy(5,3);
+        write('|');
+        gotoxy(7,3);
+        write('*');
+        gotoxy(5,4);
+        write('|');
+        gotoxy(5,5);
+        write('|');
+        gotoxy(5,6);
+        write('|');
+        gotoxy(12,1);
+        write('*');
+        gotoxy(11,2);
+        write('*');
+        gotoxy(12,2);
+        write('|');
+        gotoxy(13,2);
+        write('*');
+        gotoxy(10,3);
+        write('*');
+        gotoxy(12,3);
+        write('|');
+        gotoxy(14,3);
+        write('*');
+        gotoxy(12,4);
+        write('|');
+        gotoxy(12,5);
+        write('|');
+        gotoxy(12,6);
+        write('|');
+        gotoxy(19,1);
+        write('*');
+        gotoxy(18,2);
+        write('*');
+        gotoxy(19,2);
+        write('|');   
+        gotoxy(20,2);
+        write('*');
+        gotoxy(17,3);
+        write('*');
+        gotoxy(19,3);
+        write('|');
+        gotoxy(21,3);
+        write('*');
+        gotoxy(19,4);
+        write('|');
+        gotoxy(19,5);
+        write('|');
+        gotoxy(19,6);
+        write('|');
+      end
+    end;
+  goto opening2;
+  
+opening2: 
+  textcolor(23);
+  gotoxy(1,14);
+  delay(1000);
+  writeln('Nah yang itu');
+  delay(1000);
+  writeln('Tolong dong, dinaikkan');
+  delay(1000);
+  writeln('Ditarik ke atas gitu, sampe full');
+  delay(1000);
+  writeln('Biar enak ngeliatnya');
+  delay(1000);
+  write('Sudah ditarik ke atas? [Yes/No] ');
+  readln(ditarik);
+  case ditarik of 
+    'Yes', 'yes', 'ye', 'y', 'Y', 'YE', 'iya', 'ya', 'IYA', 'Iy', 'YA', 'JA', 'ja', 'iy', 'Iya', 'Ja', 'Ye', 'Ya':
+      begin
+        delay(1000);
+        writeln;
+        writeln(':D');
+        delay(1000);
+        writeln('Okay then~');
+        delay(1000);
+        writeln('Kalo gitu sebelum mulai ke ceritanya, program ini tipenya multiple ending ya');
+        delay(1000);
+        writeln('Dan sebenernya sudah ada alternative ending yang bisa didapatkan tadi ini hehe');
+        delay(1000);
+        writeln('Kalo gitu mari kita mulai langsung saja :>');
+        goto start;
+      end;
+    
+    'No', 'no','NO','TIDAK','Tidak','tidak': 
+      begin 
+        delay(1000);
+        writeln;
+        writeln('Loh kenapa?');
+        delay(1000);
+        writeln('Ditarik ke atas doang');
+        delay(1000);
+        writeln('Gampang kok :D');
+        delay(1000);
+        write('Sudah ditarik ke atas? [Yes/No] ');
+        readln(ditarik);
+        case ditarik of
+          'Yes', 'yes', 'ye', 'y', 'Y', 'YE', 'iya', 'ya', 'IYA', 'Iy', 'YA', 'JA', 'ja', 'iy', 'Iya', 'Ja', 'Ye', 'Ya':
+            begin
+              delay(1000);
+              writeln;
+              writeln(':D');
+              delay(1000);
+              writeln('Okay then~');
+              delay(1000);
+              writeln('Kalo gitu sebelum mulai ke ceritanya, program ini tipenya multiple ending ya');
+              delay(1000);
+              writeln('Dan sebenernya sudah ada alternative ending yang bisa didapatkan tadi ini hehe');
+              delay(1000);
+              writeln('Kalo gitu mari kita mulai langsung saja :>');
+              goto start;
+            end;
+            
+          'No', 'no','NO','TIDAK','Tidak','tidak': 
+            begin 
+              delay(1000);
+              writeln;
+              writeln('Loh kenapa?');
+              delay(1000);
+              writeln('Ditarik ke atas doang');
+              delay(1000);
+              writeln('Gampang kok :D');
+              delay(1000);
+              write('Sudah ditarik ke atas? [Yes/No] ');
+              readln(ditarik);
+              case ditarik of
+                'Yes', 'yes', 'ye', 'y', 'Y', 'YE', 'iya', 'ya', 'IYA', 'Iy', 'YA', 'JA', 'ja', 'iy', 'Iya', 'Ja', 'Ye', 'Ya':
+                  begin
+                    delay(1000);
+                    writeln;
+                    writeln(':D');
+                    delay(1000);
+                    writeln('Okay then~');
+                    delay(1000);
+                    writeln('Kalo gitu sebelum mulai ke ceritanya, program ini tipenya multiple ending ya');
+                    delay(1000);
+                    writeln('Dan sebenernya sudah ada alternative ending yang bisa didapatkan tadi ini hehe');
+                    delay(1000);
+                    writeln('Kalo gitu mari kita mulai langsung saja :>');
+                    goto start;
+                  end;
+                
+                'No', 'no','NO','N','n','TIDAK','Tidak','tidak','T','t': 
+                  begin 
+                    delay(1000);
+                    writeln;
+                    writeln('Dahlah');
+                    delay(1000);
+                    writeln('Kalo gitu gak usah mulai lah');
+                    delay(1000);
+                    writeln(':<');
+                    delay(1000);
+                    writeln;
+                    writeln;
+                    textcolor(12);
+                    writeln('THE NAUGHTY BOY ENDING');delay(1500);
+                    goto quit;
+                  end;
+              end;
+            end;  
+            
+          'N','n','T','t':
+            begin
+              delay(1000);
+              writeln;
+              writeln('Astaga semager itu kah ngetiknya XD');
+              delay(1000);
+              writeln('Anyways');
+              delay(1000);
+              writeln('Tinggal ditarik ke atas doang loh');
+              delay(1000);
+              writeln('Yok, ditarik ke atas');
+              delay(1000);
+              writeln('Gampang kok :D');
+              delay(1000);
+              write('Sudah ditarik ke atas? [Yes/No] ');
+              readln(ditarik);
+              case ditarik of
+                'Yes', 'yes', 'ye', 'y', 'Y', 'YE', 'iya', 'ya', 'IYA', 'Iy', 'YA', 'JA', 'ja', 'iy', 'Iya', 'Ja', 'Ye', 'Ya':
+                  begin
+                    delay(1000);
+                    writeln;
+                    writeln(':D');
+                    delay(1000);
+                    writeln('Okay then~');
+                    delay(1000);
+                    writeln('Kalo gitu sebelum mulai ke ceritanya, program ini tipenya multiple ending ya');
+                    delay(1000);
+                    writeln('Dan sebenernya sudah ada alternative ending yang bisa didapatkan tadi ini hehe');
+                    delay(1000);
+                    writeln('Kalo gitu mari kita mulai langsung saja :>');
+                    goto start;
+                  end;
+                  
+                'No', 'no','NO','N','n','TIDAK','Tidak','tidak','t','T': 
+                  begin 
+                    delay(1000);
+                    writeln;
+                    writeln('Dahlah');
+                    delay(1000);
+                    writeln('Kalo gitu gak usah mulai lah');
+                    delay(1000);
+                    writeln(':<');
+                    delay(1000);
+                    writeln;
+                    writeln;
+                    textcolor(12);
+                    writeln('THE NAUGHTY BOY ENDING');delay(1500);
+                    goto quit;
+                  end;
+              end;
+            end;
+        end;
+      end;
+    
+    'N','n','t','T':
+      begin
+        delay(1000);
+        writeln;
+        writeln('Astaga semager itu kah ngetiknya XD');
+        delay(1000);
+        writeln('Anyways');
+        delay(1000);
+        writeln('Tinggal ditarik ke atas doang loh');
+        delay(1000);
+        writeln('Yok, ditarik ke atas');
+        delay(1000);
+        writeln('Gampang kok :D');
+        delay(1000);
+        write('Sudah ditarik ke atas? [Yes/No] ');
+        readln(ditarik);
+        case ditarik of
+          'Yes', 'yes', 'ye', 'y', 'Y', 'YE', 'iya', 'ya', 'IYA', 'Iy', 'YA', 'JA', 'ja', 'iy', 'Iya', 'Ja', 'Ye', 'Ya':
+            begin
+              delay(1000);
+              writeln;
+              writeln(':D');
+              delay(1000);
+              writeln('Okay then~');
+              delay(1000);
+              writeln('Kalo gitu sebelum mulai ke ceritanya, program ini tipenya multiple ending ya');
+              delay(1000);
+              writeln('Dan sebenernya sudah ada alternative ending yang bisa didapatkan tadi ini hehe');
+              delay(1000);
+              writeln('Kalo gitu mari kita mulai langsung saja :>');
+              goto start;
+            end;
+              
+          'No', 'no','NO','TIDAK','Tidak','tidak': 
+            begin 
+              delay(1000);
+              writeln;
+              writeln('Loh kenapa?');
+              delay(1000);
+              writeln('Ditarik ke atas doang');
+              delay(1000);
+              writeln('Gampang kok :D');
+              delay(1000);
+              write('Sudah ditarik ke atas? [Yes/No] ');
+              readln(ditarik);
+              case ditarik of
+                'Yes', 'yes', 'ye', 'y', 'Y', 'YE', 'iya', 'ya', 'IYA', 'Iy', 'YA', 'JA', 'ja', 'iy', 'Iya', 'Ja', 'Ye', 'Ya':
+                  begin
+                    delay(1000);
+                    writeln;
+                    writeln(':D');
+                    delay(1000);
+                    writeln('Okay then~');
+                    delay(1000);
+                    writeln('Kalo gitu sebelum mulai ke ceritanya, program ini tipenya multiple ending ya');
+                    delay(1000);
+                    writeln('Dan sebenernya sudah ada alternative ending yang bisa didapatkan tadi ini hehe');
+                    delay(1000);
+                    writeln('Kalo gitu mari kita mulai langsung saja :>');
+                    goto start;
+                  end;
+                
+                'No', 'no','NO','N','n','TIDAK','Tidak','tidak','t','T': 
+                  begin 
+                    delay(1000);
+                    writeln;
+                    writeln('Dahlah');
+                    delay(1000);
+                    writeln('Kalo gitu gak usah mulai lah');
+                    delay(1000);
+                    writeln(':<');
+                    delay(1000);
+                    writeln;
+                    writeln;
+                    textcolor(12);
+                    writeln('THE NAUGHTY BOY ENDING');delay(1500);
+                    goto quit;
+                  end;
+              end;
+            end;
+          
+          'N','n','t','T':
+            begin
+              delay(1000);
+              writeln;
+              writeln('Astaga semager itu kah ngetiknya XD');
+              delay(1000);
+              writeln('Anyways');
+              delay(1000);
+              writeln('Tinggal ditarik ke atas doang loh');
+              delay(1000);
+              writeln('Yok, ditarik ke atas');
+              delay(1000);
+              writeln('Gampang kok :D');
+              delay(1000);
+              write('Sudah ditarik ke atas? [Yes/No] ');
+              readln(ditarik);
+              case ditarik of
+                'Yes', 'yes', 'ye', 'y', 'Y', 'YE', 'iya', 'ya', 'IYA', 'Iy', 'YA', 'JA', 'ja', 'iy', 'Iya', 'Ja', 'Ye', 'Ya':
+                  begin
+                    delay(1000);
+                    writeln;
+                    writeln(':D');
+                    delay(1000);
+                    writeln('Okay then~');
+                    delay(1000);
+                    writeln('Kalo gitu sebelum mulai ke ceritanya, program ini tipenya multiple ending ya');
+                    delay(1000);
+                    writeln('Dan sebenernya sudah ada alternative ending yang bisa didapatkan tadi ini hehe');
+                    delay(1000);
+                    writeln('Kalo gitu mari kita mulai langsung saja :>');
+                    goto start;
+                  end;
+                  
+                'No', 'no','NO','N','n','TIDAK','Tidak','tidak','t','T': 
+                  begin 
+                    delay(1000);
+                    writeln;
+                    writeln('Dahlah');
+                    delay(1000);
+                    writeln('Kalo gitu gak usah mulai lah');
+                    delay(1000);
+                    writeln(':<');
+                    delay(1000);
+                    writeln;
+                    writeln;
+                    textcolor(12);
+                    writeln('THE NAUGHTY BOY ENDING');delay(1500);
+                    goto quit;
+                  end;
+              end;
+            end;
+        end;
+    end;
+  end;
+      
+start:
+  clrscr;delay(1500);
+  writeln('???: Weh kamu gapapa?');delay(1500);
+  writeln('You: Hah... apa yang terjadi?');delay(1500);
+  writeln('???: Kelihatannya kamu kepalamu terbentur dengan keras');delay(1500);
+  writeln('You: Hah');
+  delay(1000);write('.');delay(1000);write('.');delay(1000);writeln('.');
+  writeln('???: Kamu masih ingat namamu gak?');delay(1500);
+  writeln;
+  write('Insert your name: ');readln(nama);
+  writeln;
+  write('You: ');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');write(' Namaku');delay(1000);write('.');delay(1000);write('.');delay(1000);writeln('.');
+  writeln(nama);
+  writeln('???: Baguslah! Setidaknya kamu masih ingat namamu');delay(1500);
+  writeln;
+  writeln('*suara gemerisik semak-semak*');delay(1500);
+  writeln('???: ');delay(200);write('!');delay(200);write('!');delay(200);write('!'); 
+  writeln('You: Apa it-');delay(1500);
+  writeln('???: sstttt!!! ayo segera pergi!');delay(1500);
+  writeln;
+  write('Welcome ');delay(1000);write('to ');delay(1000);
+  textcolor(12); 
+  write('C');delay(1000);write('H');delay(1000);write('R');delay(1000);write('I');delay(1000);write('S');delay(1000);write('T');delay(1000);write('M');delay(1000);write('A');delay(1000);write('S   ');delay(1000);write('S');delay(1000);write('E');delay(1000);write('R');delay(1000);write('I');delay(1000);write('A');delay(1000);write('L   ');delay(1000);write('K');delay(1000);write('I');delay(1000);write('L');delay(1000);write('L');delay(1000);write('E');delay(1000);write('R');delay(1000);
+  textcolor(23);
+  write('! ! !');delay(1000);write(' .');delay(1000);write('.');delay(1000);write('.');delay(1000);write('anticlimactic, i know');delay(1000);
+  goto action1;
+
+action1:
+  writeln;
+  writeln;
+  writeln('1. Tapi... kamu siapa?');
+  writeln('2. Kamu membawaku kemana?!');
+  writeln('3. Anjir, loe sapa emang narik-narik gweh!');
+  write('Choose your next move (insert a number): '); readln(option); 
+  if option=1 then
+    goto action1_1
+  else if option=2 then 
+    goto action1_2
+  else if option=3 then
+    goto action1_3
+  else
+    begin
+      writeln('Your option wasn''t in the options given'); 
+      writeln('Please try again');
+      delay(1000); 
+      goto action1;
+    end;
+    
+action1_1: 
+  writeln; writeln;
+  writeln('You: Ehm.. maaf... tapi... kamu sebenernya siapa?');delay(1500);
+  writeln('???: Bentar kita bicarakan nanti saja, sekarang kita harus bergegas lari dulu');delay(1500);
+  writeln('You: ??? *di dalam hati* ada apa sih, kutebak kamu juga mikir begitu kan :)');delay(1500);writeln;
+  writeln('*setelah sekian lama*');delay(1500);writeln;
+  writeln('???: Kelihatannya kita sudah lolos darinya');delay(1500);
+  writeln('You: ''Nya''? Siapa ''nya''');delay(1500);
+  writeln('???: Kelihatannya kamu bener-bener gak inget apa-apa ya'); delay(1500);
+  writeln('Budi: Anyways, namaku Budi, sebenernya kita tadi sedang dikejar dia');delay(1500);
+  writeln('You: Dikejar? Dia? Hah???');delay(1500);
+  writeln('Budi: Huft, kamu bener-bener lupa ya');delay(1500);
+  writeln('Budi: Kita ini sebenernya masuk ke dalam sebuah game natal dan ada hadiahnya');delay(1500);
+  writeln('You: Game apa???');delay(1500);
+  writeln('Budi: Sebenernya gamenya sederhana yaitu hide n'' seek saja');delay(1500);
+  writeln('You: Terus? Kenapa kamu kelihatan tegang banget?');delay(1500);
+  writeln('Budi: Nah ya tetapi hide''n seek ini tidak sesederhana kedengarannya');delay(1500);
+  writeln('You: Maksudnya?');delay(1500);
+  writeln('Budi: Tadi aku... ');delay(1500);
+  writeln('You: Nang cepetan lah kalo mau ngomong');delay(1500);
+  writeln('Budi: Tadi aku kelihatan ada yang mati...');delay(1500);
+  goto action2from1;
+
+action2from1:
+  writeln; writeln;
+  writeln('1. Hah???');
+  writeln('2. Wow, benarkah?');
+  writeln('3. Apaan sih? Paling kamu salah lihat doang');
+  write('Choose your next move (insert a number): '); readln(option); 
+  if option=1 then
+    goto action2from1_1
+  else if option=2 then 
+    goto action2from1_2
+  else if option=3 then
+    goto action2from1_3
+  else
+    begin
+      writeln('Your option wasn''t in the options given'); 
+      writeln('Please try again');
+      delay(1000); 
+      goto action2from1;
+    end;
+
+action2from1_1: 
+  writeln;writeln;
+  writeln('You: Hah???');delay(1500); 
+  writeln('Budi: Hah???');delay(1500); 
+  writeln('You: Haaa???????');delay(1500); 
+  writeln('Budi: HAAAAA?????????');delay(1500);
+  writeln('You: HAAAHHH??????????');delay(1500); 
+  writeln('Budi: HAAAHHHHHHHHH??????!!!!!');delay(1500); 
+  writeln('You: AAAAAAAAAA');delay(1500); 
+  writeln('Budi: AAAAAAAAAAAAAAAAA');delay(1500); 
+  writeln('You: AAAAAAAA kek latihan vokal ae, Bud');delay(1500); 
+  writeln('Budi: Iya juga, mungkin kita mau jadi anak padus');delay(1500); 
+  writeln('You: Stressssss');delay(1500);
+  writeln('Budi: Makanya aku juga terkejut kita masih belum ketahuan');delay(1500); 
+  writeln('You: Iya juga, kamu kira dia, siapapun itu yang ngejar kita tadi, denger gak ya');delay(1500); 
+  writeln('Budi: Ya jelas denger lah, dia loh dah di belakangmu');delay(1500); 
+  writeln('You: OoooOOoOoOOOooo... OOOO, oke, nice to meet you, Bud, I wish you wel-');delay(1500);
+  writeln;writeln;
+  textcolor(14);
+  writeln('THE SINGER ENDING');delay(1500);
+  goto quit;
+  
+action2from1_2:
+  writeln;writeln;
+  writeln('You: *gasp* wow,  benarkah?');delay(1500);
+  writeln('Budi: Iya cuy, rilllll');delay(1500);
+  writeln('You: *gaspppp*');delay(1500);
+  writeln('Budi: *gasp* aja kamu, kamu asma kah');delay(1500);
+  writeln('You: *gasppp*');delay(1500);
+  writeln('Budi: Anjir beneran kelihatannya loe asma');delay(1500);
+  writeln('You: Pfft- HAAHHAHHA');delay(1500);
+  writeln('Budi: Dari asma malah ke gila gak tuh');delay(1500);
+  writeln('You: Loh kamu sih, kayak orang yang innocent sekali');delay(1500);
+  writeln('Budi: Hah? maksudmu coba');delay(1500);
+  writeln('You: Iya kamu sudah tahu kalau ada yang mati terus gimana dong');delay(1500);
+  writeln('     Terus aku harus apain kamu dong ini');delay(1500);
+  writeln('Budi: ???');delay(1500);
+  writeln('You: OHHH, ya sih aku lupa ya, belum beritahu kamu');delay(1500);
+  writeln('     Ssebenernya aku yang bunuh dia');delay(1500);
+  writeln('Budi: ???????????????');delay(1500);
+  writeln('You: *gasp* I know righttt, gak no one believes me ');delay(1500);
+  writeln('Budi: Terus berarti kamu yang bunuh dia???');delay(1500);
+  writeln('You: Iya dong siapa lagi kalo bukan dia');delay(1500);
+  writeln('Budi: HAHHAHAHA kamu sendiri loh yang ngomong');delay(1500);
+  writeln('You: Hah ngapain lu ketawa-ketawa anjir');delay(1500);
+  writeln('     Kamu gak sadar habis gini giliranmu?');delay(1500);
+  writeln('Budi: Lah kok aku, kamu lah');delay(1500);
+  writeln('You: ???');delay(1500);
+  writeln('Budi: We got ‘em boys');delay(1500);
+  writeln('You: ???');delay(1500);
+  writeln('Budi: Selamat saya adalah polisi undercover');delay(1500);
+  writeln('     You have the right to remain silent');delay(1000);
+  writeln('     Anything you say can and will be used against you');delay(1000);
+  writeln('     You have a right to an attorney');delay(1000);
+  writeln('     If you can’t afford an attorney, one will be provided for you. ');delay(1000);
+  writeln('     Do you understand these rights as I have explained them to you?');delay(1000);
+  writeln('You: ?!?!?!!');delay(1500);
+  writeln('Budi: Hiyaaa keciduk gemink :)');delay(1500);
+  textcolor(9);
+  writeln;writeln;writeln('THE SERIAL KILLER KOCAK GAMING ENDING :v');delay(1500);
+  goto quit;
+
+action2from1_3:
+  writeln;writeln;
+  writeln('You: Ohhh');delay(1500);
+  writeln('Budi: Iya begitulah… kamu rasanya kok gak ada reaksinya sama sekali???');delay(1500);
+  writeln('You: Ya iyalah, sudah tahu kok aku, yakan pembaca');delay(1500);
+  writeln('Budi: ???');delay(1500);
+  writeln('You: Paling juga kamu sudah tahu apa yang sedang terjadi di seluruh cerita ini');delay(1500);
+  writeln('Budi: ??? tapi ini bukan cerita???');delay(1500);
+  writeln('You: Sebenernya pun kamu juga bisa lihat dari codingannya yakan');delay(1500);
+  writeln('Budi: Coding apaan? ');delay(1500);
+  writeln('You: Tapi jujur aja, pasti bingung kan bacanya');delay(1500);
+  writeln('Budi: Hah? emang kamu baca apa???');delay(1500);
+  writeln('You: Aku juga kok, walaupun aku yang bikin');delay(1500);
+  writeln('Budi: Ini anak ngomong apaan sih? Mungkin kebentur terlalu keras ya kepalanya');delay(1500);
+  writeln('You: Pusing bener wah bikin ini semua');delay(1500);
+  writeln('Budi: ??? kamu ngomong sama siapa sih dari tadi??? halooooo');delay(1500);
+  writeln('You: Ya kamu, siapa lagi, emang ada siapa lagi selain kamu di sini');delay(1500);
+  writeln('Budi: Lah anjir, loe gak nyambung sih daritadi');delay(1500);
+  writeln('You: Kamu sendiri');delay(1500);
+  writeln('Budi: Hah? aku gak sendirian? kan ada kamu???');delay(1500);
+  writeln('You: Aneh gak sih baca ini, aku juga bingung sebenernya mau ngetik apa');delay(1500);
+  writeln('Budi: Ohhhh ini anakkkk perlu ditampolllll');delay(1500);
+  writeln('You: Anyways, silahkan try again, cuz this is the end for this route');delay(1500);
+  writeln('Budi: *siap-siap nampol*');delay(1500);
+  writeln('You: Oh, and a very merry Christmas to yo-');delay(1500);
+  writeln('Budi: *nampol* MAMPOS, GAK JELAS BANGET NGOMONG DARI TADI');delay(1500);
+  writeln;writeln;
+  textcolor(11);
+  write('4TH WALL BREAKING SCENE');delay(1000);writeln(' AND A VERY USELESS MESSAGE');delay(1500);
+  goto quit;
+  
+action1_2:
+  writeln; writeln;
+  writeln('You: Aduh! Kamu membawaku kemana?! Kenapa buru-buru banget!');delay(1500);
+  writeln('???: Bentar, nanti saja kujelaskan. Sekarang kita harus bergegas lari dulu!');delay(1500);writeln;
+  writeln('*setelah sekian lama*');delay(1500);writeln;
+  writeln('???: Huft, oke kelihatannya kita sudah jauh darinya');delay(1500);
+  writeln('You: Kita di mana tengah malam begini??? kita memang lari dari siapa tadi???');delay(1500);
+  writeln('???: Oh ya, kamu lupa ya, kita berada di dalam game hide n’ seek natalan itu loh');delay(1500);
+  writeln('You: Hah? kenapa kok game hide n’ seek saja perlu di tengah malam dan di hutan?');delay(1500);
+  writeln('???: Kalo itu aku tidak tahu, tapi memang jadwal di posternya dikatakan begitu');delay(1500);
+  writeln('Budi: Anyways, namaku Budi, semoga kita bisa bertahan sampai akhir');delay(1500);
+  goto action2from2;
+  
+action2from2:
+  writeln; writeln;
+  writeln('1. Mungkin lebih baik saja kalau kita tetap bersama');
+  writeln('2. Mungkin lebih baik kita berpisah saja');
+  writeln('3. *Kenapa semua ini terlihat begitu sus*');
+  write('Choose your next move (insert a number): '); readln(option); 
+  if option=1 then
+    goto action2from2_1
+  else if option=2 then 
+    goto action2from2_2
+  else if option=3 then
+    goto action2from2_3
+  else 
+    begin
+      writeln('Your option wasn''t in the options given'); 
+      writeln('Please try again');
+      delay(1000); 
+      goto action2from2;
+    end;
+
+action2from2_1:
+  writeln;writeln;
+  writeln('You: Kalau begitu bagaimana kalau kita bertahan bersama saja?');delay(1500);
+  writeln('Budi: Ide yang bagus sekalih! Rencana awalku memang begitu');delay(1500); 
+  writeln('You: Kalau begitu sekarang bagaimana? ');delay(1500);
+  writeln('Budi: Bagaimana kalau kita pergi dulu dari sini. Mau pergi ke mana enaknya?');delay(1500);
+  goto action3from1;
+  
+action3from1:
+  writeln; writeln;
+  writeln('1. Basement');
+  writeln('2. Sekolah');
+  writeln('3. Rumah');
+  write('Choose your next move (insert a number): '); readln(option); 
+  if option=1 then
+    goto action3from1_1
+  else if option=2 then 
+    goto action3from1_2
+  else if option=3 then
+    goto action3from1_3
+  else 
+    begin
+      writeln('Your option wasn''t in the options given'); 
+      writeln('Please try again');
+      delay(1000); 
+      goto action3from1;
+    end;
+
+action3from1_1:
+  writeln;writeln;
+  writeln('You: Bagaiamana kalau kita pergi ke basement saja? ');delay(1500);
+  writeln('     Tempat itu pasti tidak cukup tersembunyi');delay(1500);
+  writeln('Budi: Benar juga! Kenapa ya tidak terpikirkan olehku!');delay(1500);
+  writeln('You: Yok langsung ke sana');delay(1500);
+  writeln;writeln('*setelah tiba*');writeln;delay(1500);
+  writeln('Budi: Nah sip kita sudah sampe, kamu masuk dulu aja, aku ngambil barangku dulu');delay(1500);
+  writeln('You: Oke oke, btw mana switch lampunya buat basementnya, gelap banget di sini');delay(1500);
+  writeln('     Lah sudah pergi anaknya, okelah aku tak cari sendiri');delay(1500); 
+  writeln;writeln('*secara perlahan kamu turun tangga*');writeln;delay(1500);
+  writeln('You: Anjir! bau apa itu…');
+  writeln;writeln('*bunyi pintu basement terbuka*');writeln;delay(1500);
+  writeln('You: Bud? Kamu tah itu?');delay(1500);
+  writeln('Budi: Oh iya iya, aku ini');delay(1500);
+  writeln;writeln('nutup pintu*');writeln;delay(1500);
+  writeln('You: Bud, nyalain lampunya dong, aku gak bisa lihat apa-apa di sini ');delay(1500);
+  writeln('     Plus bau apa ini, gak enak banget');delay(1500);
+  writeln('     .');delay(1000);writeln('     .');delay(1000);writeln('     .');delay(1000);
+  writeln('      Bud? Bud? Kamu di sini? AH!');delay(1500);
+  writeln('Budi: Hehe sori ya');delay(1500);
+  writeln('You: Bud... Kamu ngapain... *vomits blood*');delay(1500);
+  writeln('Budi: Ya... Kamunya sih yang mau dateng ke sini dengan sendirinya');delay(1500); 
+  writeln('You: AHH PERUTKUUU, KAMU NGAPAIN NIKAM PERUTKU ANJIR');delay(1500);
+  writeln('Budi: Lah ya iyalah, aku nya kok pembunuhnya');delay(1500);
+  writeln('You: K-kenapa...  kukira kita teman...');delay(1500);
+  write('Budi: Bro... kita baru ketemu-');delay(1500);writeln('makanya jangan percaya orang asing :v');delay(1500); 
+  writeln('You: .');delay(1000);
+  writeln('     .');delay(1000);writeln('     .');delay(1000);
+  writeln('     You betrayed me~');delay(1500);
+  writeln('Budi: I- kamu nyanyi???');delay(1500);
+  writeln('You: And I know that you’ll never feel sorry~');delay(1500);
+  writeln('Budi: Heh- itu...');delay(1500);
+  writeln('You: For the way I hurt, yeah~');delay(1500);
+  writeln('Budi: Bukannya itu lagu-');delay(1500);
+  write('You: Guess you didn''t cheat...');delay(1000);writeln('but you''re still a traitor…-');delay(1500);
+  writeln('Budi: Itu kan lagu Traitor – Olivia Rodrigo… #sponsor #streamonallplatforms');delay(1500);
+  writeln;writeln;
+  textcolor(13);
+  writeln('THE TRAITOR ENDING');delay(1500);
+  goto quit;
+  
+action3from1_2:
+  writeln; writeln;
+  writeln('You: Bagaimana kalau kita pergi ke sekolah saja? ');delay(1500);
+  writeln('Budi: Anjir tapi sekolah itu sudah abandoned loh');delay(1500);
+  writeln('You: Nah lebih baik kan, jadinya pasti bakal sepi gitu loh');delay(1500); 
+  writeln('Budi: Hmm bener juga sih, oke deh skuy aja lah');delay(1500); 
+  writeln;writeln('*tiba di sekolah*');writeln;delay(1500);
+  writeln('You: Wah jadi agak nostalgia ya ke sekolah');delay(1500);
+  writeln('Budi: Hmm aku gak ya, apalagi tempat ini kelihatan kayak angker banget');delay(1500);
+  writeln('You: Gak lah, aman lah pasti, masuk ke kelas ae biar lebih tersembunyi');delay(1500);
+  writeln;writeln('*masuk ke kelas, pintu terkunci*');writeln;delay(1500);
+  writeln('Budi: Lah anjir? weh pintunya ketutup!');delay(1500);
+  writeln('You: Hah??? Loh, weh anjir kok gak isa buka?!');delay(1500);
+  writeln('Budi: Weh... lihat papannya...');delay(1500);
+  writeln('...: Selesaikanlah pertanyaan ini kalau mau keluar...');delay(1500);
+  writeln('Budi: Yakan! sudah kutebak tempat ini ada hantunya');delay(1500);
+  writeln('You: Ah tenang lah, setidaknya kita masih bisa keluar, aman lah');delay(1500);
+  writeln('...: Haha mau pergi ke pelabuhan A yang berjarak sejauh 377km darinya.');delay(1500);
+  writeln('     Pelabuhan A ini berada di arah Tenggara dari lokasi Haha sekarang.');delay(1500);
+  writeln('     Tetapi Haha hanya bisa bergerak menuju arah Timur dan Selatan saja.');delay(1500);
+  writeln('You: Oke tampaknya sederhana lah');delay(1500);
+  writeln('Budi: Iya-iya, kelihatannya masih bisa lah');delay(1500);
+  writeln('...: Dengan Haha yang terletak pada titik O dengan tingkat derajat sebesar 279°,');delay(1500);
+  writeln('     Haha membutuhkan usaha yang sebesar 450 J/m untuk berpindah tempat.');delay(1500);
+  writeln('     Dan dengan tambahan hambatan dari HCl yang tertumpahkan pada kaki Haha,');delay(1500);
+  writeln('     Usaha yang dibutuhkan karena otot kaki Haha tidak dapat bekerja dengan baik');delay(1500);
+  writeln('     Adalah sebesar konstanta G dikali konstanta dikali jari-jari Bohr');delay(1500);
+  writeln('You: ...');delay(1500);
+  writeln('Budi: ...');delay(1500);
+  writeln('...:  Sekarang tentukan berapa banyak hewan peliharaan yang Haha punya!');delay(1500);
+  writeln('You: ...');delay(1500);
+  writeln('Budi: ...');delay(1500);
+  writeln;writeln('Insert an answer: ');readln(answer);delay(1500);
+  if answer='-1' then
+    begin
+      writeln;
+      writeln('...: Anda benar!');delay(1500);
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      writeln;writeln;
+      textcolor(1);
+      write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+      goto quit;
+    end
+  else if answer='min 1' then
+    begin
+      writeln;
+      writeln('...: Anda benar!');delay(1500);
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      writeln;writeln;
+      textcolor(1);
+      write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+      goto quit;
+    end
+  else if answer='min satu' then
+    begin
+      writeln;
+      writeln('...: Anda benar!');delay(1500);
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      writeln;writeln;
+      textcolor(1);
+      write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+      goto quit;
+    end
+  else if answer='- satu' then
+    begin
+      writeln;
+      writeln('...: Anda benar!');delay(1500);
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      writeln;writeln;
+      textcolor(1);
+      write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+      goto quit;
+    end
+  else if answer='minsatu' then
+    begin
+      writeln;
+      writeln('...: Anda benar!');delay(1500);
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      writeln;writeln;
+      textcolor(1);
+      write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+      goto quit;
+    end
+  else if answer='-satu' then
+    begin
+      writeln;
+      writeln('...: Anda benar!');delay(1500);
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      writeln;writeln;
+      textcolor(1);
+      write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+      goto quit;
+    end
+  else if answer='Min satu' then
+    begin
+      writeln;
+      writeln('...: Anda benar!');delay(1500);
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      writeln;writeln;
+      textcolor(1);
+      write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+      goto quit;
+    end
+  else if answer='Minsatu' then
+    begin
+      writeln;
+      writeln('...: Anda benar!');delay(1500);
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      writeln;writeln;
+      textcolor(1);
+      write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+      goto quit;
+    end
+  else if answer=' Minsatu' then
+    begin
+      writeln;
+      writeln('...: Anda benar!');delay(1500);
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      writeln;writeln;
+      textcolor(1);
+      write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+      goto quit;
+    end
+  else if answer=' minsatu' then
+    begin
+      writeln;
+      writeln('...: Anda benar!');delay(1500);
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+      writeln('You: ...');delay(1500);
+      writeln('Budi: ...');delay(1500);
+      writeln;writeln;
+      textcolor(1);
+      write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+      goto quit;
+    end
+  else 
+    begin 
+      writeln;
+      write('...: Anda salah!');delay(1600);writeln(' anda memiliki 2 kesempatan lagi');
+      writeln('Insert an answer: ');readln(answer);
+      if answer='-1' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer='min 1' then
+         begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer='min satu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer='- satu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer='minsatu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer='-satu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer='Min satu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer='Minsatu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer=' Minsatu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer=' minsatu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else 
+        begin 
+          writeln;
+          write('...: Anda salah!');delay(1600);writeln(' anda memiliki 1 kesempatan lagi');
+          writeln('Insert an answer: ');readln(answer);
+          if answer='-1' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer='min 1' then
+         begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer='min satu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer='- satu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer='minsatu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer='-satu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer='Min satu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer='Minsatu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer=' Minsatu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else if answer=' minsatu' then
+        begin
+          writeln;
+          writeln('...: Anda benar!');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          write('...: Sekarang anda bisa keluar');delay(1000);writeln(' hanya saja tanpa nyawa kalian');
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          write('THE');delay(1000);write(' is');delay(1000);write(' this');delay(1000);write(' the');delay(1000);write(' power');delay(1000);write(' of');delay(1000);write(' a');delay(1000);write(' g-');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' CHEATER');delay(1000);writeln(' ENDING');delay(1500);
+          goto quit;
+        end
+      else 
+        begin 
+          writeln;
+          writeln('...: Anda salah!');delay(1600);
+          writeln('     Karena anda tidak memiliki kesempatan lagi');delay(1500); 
+          writeln('     Anda tidak akan keluar dari ruangan ini dengan nyawa kalian');delay(1500);
+          writeln('You: ...');delay(1500);
+          writeln('Budi: ...');delay(1500);
+          writeln;writeln;
+          textcolor(1);
+          writeln('THE YOU''RE A FAILURE ENDING');delay(1500);
+          goto quit;
+        end
+        end
+    end;
+
+  
+action3from1_3:
+  writeln('You: Bagaimana kalau kita pergi ke rumah itu saja?');delay(1500);
+  writeln('Budi: Loh dari mana munculnya rumah itu-');delay(1500);
+  writeln('You: Bukannya dari tadi sudah ada di sana?');delay(1500);
+  writeln('Budi: Kelihatannya enggak… okelah gakpapa kita ke sana saja');delay(1500);
+  writeln;writeln('*tiba di rumah tersebut*');writeln;delay(1500);
+  writeln('You: Bud!!! Lihatlah ini!!!');delay(1500);
+  writeln('Budi: Apa-apa? woah... Kasur macam apa ini');delay(1500);
+  writeln('You: Gak tahu, tapi kok perasaan kelihatan mewah banget');delay(1500);
+  writeln('Budi: Hooh, plus kelihatan sangat empuk gimana gitu');delay(1500);
+  writeln('You: Kira-kira ide bagus gak ya buat tidur...?');delay(1500);
+  writeln;write('Do you wanna sleep on it? [Yes/No] ');readln(answer);
+  case answer of
+    'Yes', 'yes', 'ye', 'y', 'Y', 'YE', 'iya', 'ya', 'IYA', 'Iy', 'YA', 'JA', 'ja', 'iy', 'Iya', 'Ja', 'Ye', 'Ya':
+      begin
+        writeln;
+        write('*selamat');delay(1000);write(' sekarang');delay(1000);write(' anda');delay(1000);writeln(' terjebak di sini untuk selamanya*');delay(1000);
+        write('You: K-kenapa aku tiba-tiba merasa...');delay(1000);write(' sangat mengantuk...');delay(1500);
+        writeln;writeln;
+        textcolor(9);
+        write('THE GOOD ENDING');delay(1000);
+        textcolor(23);
+        write(' hey at least you just slept okay');delay(1500);
+        goto quit;
+      end;
+    'No', 'no','NO','N','n','TIDAK','Tidak','tidak','t','T': 
+      begin 
+        writeln;
+        write(' No matter what your decision is, YOU still slept on the bed');delay(1000);
+        write('You: K-kenapa aku tiba-tiba merasa...');delay(1000);write(' sangat mengantuk...');delay(1500);
+        writeln;writeln;
+        textcolor(9);
+        write('THE GOOD ENDING');delay(1000);
+        textcolor(23);
+        write(' hey at least you just slept okay');delay(1500);
+        goto quit;
+      end;
+  end;
+
+action2from2_2:
+  writeln;writeln;
+  writeln('You: Kalau begitu lebih baik kita berpisah saja');delay(1500);
+  writeln('Budi: Eh? kenapa? bukannya lebih baik kalau kita tetap bersama saja?');delay(1500);
+  writeln('You: Kelihatannya tidak deh, apabila kita tetap bersama,');delay(1000);
+  writeln('     Maka pasti akan tambah susah untuk bergerak');delay(1500);
+  writeln('Budi: Benar juga sih, but…');delay(1500);
+  writeln('You: But...?');delay(1500);
+  writeln('Budi: Ne...');delay(1500);
+  writeln('You: Ne? ');delay(1500);
+  writeln('Budi: Ne...');delay(1500);
+  writeln('      Ne...');delay(1500);
+  writeln('You: WOI CEPETAN LAH KALO NGOMONG');delay(1500);
+  write('Budi: Never gonna give you up~');write('Insert damage (number): +');readln(damage1);delay(1500);
+  write('      Never gonna let you down~');write('Insert damage (number): +');readln(damage2);delay(1500);
+  write('      Never gonna run around and desert you~');write('Insert damage (number): +');readln(damage3);delay(1500);
+  write('      Never gonna make you cry~');write('Insert damage (number): +');readln(damage4);delay(1500);
+  write('      Never gonna say goodbye~');write('Insert damage (number): +');readln(damage5);delay(1500);
+  write('      Never gonna tell a lie and hurt you~');write('Insert damage (number): +');readln(damage6);delay(1500);
+  writeln('You: .');delay(1500);
+  writeln('     .');delay(1500);
+  writeln('     .');delay(1500);
+  writeln('Damage accumulated: ', damage1+damage2+damage3+damage4+damage5+damage6:0:2);delay(1500);
+  writeln('Budi has dealt ',damage1+damage2+damage3+damage4+damage5+damage6:0:2, ' total of damage!');delay(1500);
+  writeln('It''s a critical hit!');delay(1500);
+  writeln('YOU have been inflicted by confusion');delay(1500);
+  writeln('YOU have flinched');delay(1500);
+  writeln('Oh no, YOU have fainted!');delay(1500);
+  writeln('I choose you, Rick Astley!');delay(1500);
+  writeln('Rick Astley has been summoned');delay(1500);
+  writeln('Rick Astley only has one move: Rick Roll');delay(1500);
+  write('Do yo want to use Rick Roll? ');delay(3000);writeln('Yes');
+  writeln('Rick Astley used Rick Roll');delay(1500);
+  writeln('It critically hit!');delay(1500);
+  writeln('Budi has faitend');delay(1500);
+  writeln('You''ve won the battle, congratulations!');delay(1500);
+  writeln('You''ve been Rick Rolled as well, my condolonces');delay(1500);
+  writeln;writeln('RIP sorry had to do it hehe :>');writeln;delay(1500);
+  textcolor(6);
+  writeln;writeln('THE WORSE ENDING');delay(1500);
+  goto quit;
+  
+action2from2_3: //and no, this is intentionally made the exact copy
+  writeln;writeln;
+  writeln('You: Kalau begitu bagaimana kalau kita bertahan bersama saja?');delay(1500);
+  writeln('Budi: Ide yang bagus sekalih! Rencana awalku memang begitu');delay(1500); 
+  writeln('You: Kalau begitu sekarang bagaimana? ');delay(1500);
+  writeln('Budi: Bagaimana kalau kita pergi dulu dari sini. Mau pergi ke mana enaknya?');delay(1500);
+  goto action3from3;
+  
+action3from3:
+  writeln('You: Bagaiamana kalau kita pergi ke basement saja? ');delay(1500);
+  writeln('     Tempat itu pasti tidak cukup tersembunyi');delay(1500);
+  writeln('Budi: Benar juga! Kenapa ya tidak terpikirkan olehku!');delay(1500);
+  writeln('You: Yok langsung ke sana');delay(1500);
+  writeln;writeln('*setelah tiba*');writeln;delay(1500);
+  writeln('Budi: Nah sip kita sudah sampe, kamu masuk dulu aja, aku ngambil barangku dulu');delay(1500);
+  writeln('You: Oke oke, btw mana switch lampunya buat basementnya, gelap banget di sini');delay(1500);
+  writeln('     Lah sudah pergi anaknya, okelah aku tak cari sendiri');delay(1500); 
+  writeln;writeln('*secara perlahan kamu turun tangga*');writeln;delay(1500);
+  writeln('You: Anjir! bau apa itu…');
+  writeln;writeln('*bunyi pintu basement terbuka*');writeln;delay(1500);
+  writeln('You: Bud? Kamu tah itu?');delay(1500);
+  writeln('Budi: Oh iya iya, aku ini');delay(1500);
+  writeln;writeln('nutup pintu*');writeln;delay(1500);
+  writeln('You: Bud, nyalain lampunya dong, aku gak bisa lihat apa-apa di sini ');delay(1500);
+  writeln('     Plus bau apa ini, gak enak banget');delay(1500);
+  writeln('     .');delay(1000);writeln('     .');delay(1000);writeln('     .');delay(1000);
+  writeln('      Bud? Bud? Kamu di sini? AH!');delay(1500);
+  writeln('Budi: Hehe sori ya');delay(1500);
+  writeln('You: Bud... Kamu ngapain... *vomits blood*');delay(1500);
+  writeln('Budi: Ya... Kamunya sih yang mau dateng ke sini dengan sendirinya');delay(1500); 
+  writeln('You: AHH PERUTKUUU, KAMU NGAPAIN NIKAM PERUTKU ANJIR');delay(1500);
+  writeln('Budi: Lah ya iyalah, aku nya kok pembunuhnya');delay(1500);
+  writeln('You: K-kenapa...  kukira kita teman...');delay(1500);
+  write('Budi: Bro... kita baru ketemu-');delay(1500);writeln('makanya jangan percaya orang asing :v');delay(1500); 
+  writeln('You: .');delay(1000);
+  writeln('     .');delay(1000);writeln('     .');delay(1000);
+  writeln('     You betrayed me~');delay(1500);
+  writeln('Budi: I- kamu nyanyi???');delay(1500);
+  writeln('You: And I know that you’ll never feel sorry~');delay(1500);
+  writeln('Budi: Heh- itu...');delay(1500);
+  writeln('You: For the way I hurt, yeah~');delay(1500);
+  writeln('Budi: Bukannya itu lagu-');delay(1500);
+  write('You: Guess you didn''t cheat...');delay(1000);writeln('but you''re still a traitor…-');delay(1500);
+  writeln('Budi: Itu kan lagu Traitor – Olivia Rodrigo… #sponsor #streamonallplatforms');delay(1500);
+  writeln;writeln;
+  textcolor(13);
+  writeln('THE TRAITOR ENDING');delay(1500);
+  textcolor(23);
+  writeln('You: Or is it :)');delay(1500);
+  writeln('     So here''s the thing, B U D I');delay(1500);
+  writeln('     Loe kira gweh gak bakal sadar kalo loe sus banged?');delay(1500);
+  writeln('     Karena itu gw pura-pura dari tadi, seperti orang bodo keinginanmu');delay(1500); 
+  writeln('     Tapi sebenernya yang kamu tidak tahu adalah');delay(1500);
+  writeln('     Di sini, aku adalah main characternya');delay(1500);
+  writeln('     Dan yang baru kamu tusuk itu adalah plot armorku');delay(1500);
+  writeln('     So screw you, I''m the main villain now muaahahahahaaha');delay(1500);
+  writeln('     ... yeah I know it''s definitely cringe');delay(1500);
+  writeln;writeln;
+  textcolor(12);
+  writeln('A VILLAIN HAS BEEN AWOKEN! ENDING');delay(1500);
+  goto quit;
+
+action1_3:
+  writeln;writeln;
+  writeln('You: Ih, lepasin! kamu memang siapa narik-narik gweh?!'); delay(1500);
+  writeln('???: Heh! kamu ngapain?! nanti dia bakal nangkap kita!');delay(1500);
+  writeln('You: Apa maksudmu?! siapa dia?!');delay(1500);
+  writeln('???: Si pembunuh! kalau kamu tertangkap kamu akan di bunuh!');delay(1500);
+  writeln('You: Hah?! pembunuh apaan?! loe sinting ya!');delay(1500);
+  writeln('???: Apasih, sekarang bukan waktunya buat kita bertengkar gini! Dia-');delay(1500);
+  writeln('You: Apa! kenapa loe diem aja?! bisu ya?');delay(1500); 
+  writeln('???: Au ah! good luck!');delay(1500);
+  writeln('You: Heh! good luck kenapa?! anjir ditinggal beneran dong');delay(1500); 
+  writeln('     Sekarang gweh di mana ini coba!'); delay(1500);
+  writeln('     Balik lagi lah aku ke tempat tadi'); delay(1500); 
+  writeln('     Aduh! woi! lihat-lihat lah kalo jalan! ...? siapa-'); delay(1500);
+  writeln;writeln('*bonk, sekarang kamu pingsan*');delay(1500);
+  goto action2from3;
+
+//this is done i think
+action2from3:
+  writeln; writeln;
+  writeln('1. Aduh, jadi orang jangan sinting dong!');
+  writeln('2. Kamu siapa!');
+  writeln('3. Ada di mana aku?');
+  write('Choose your next move (insert a number): '); readln(option); 
+  if option=1 then
+    goto action2from3_1
+  else if option=2 then 
+    goto action2from3_2
+  else if option=3 then
+    goto action2from3_3
+  else
+    begin
+      writeln('Your option wasn''t in the options given'); 
+      writeln('Please try again');
+      delay(1000); 
+      goto action2from3;
+    end;
+
+action2from3_1:
+  writeln;writeln; 
+  writeln('You: Aduh, woi kamu sinting ya!');delay(1500); 
+  writeln('...: ...');delay(1500); 
+  writeln('You: Apa kamu lihat-lihat! lepaskan ini!');delay(1500); 
+  writeln('...: ...');delay(1500); 
+  writeln('You: Ini anak kurang ajar ya! jangan lihat doang! lepaskan!');delay(1500);
+  writeln('...: ...');delay(1500); 
+  writeln('You: Heh!... heh?... HEH???');delay(1500);
+  writeln('...: ...');delay(1500); 
+  writeln('You: Kamu ngapain?! Jangan mendekat!');delay(1500);
+  writeln('...: ...');delay(1500); 
+  writeln('You: Tidak! ampun! maaf! salahku! taruh saja pisaunya!');delay(1500);
+  writeln('...: ...');
+  writeln('You: Tidak! TIDAK! ANJ- hayo mikirin apa kamu, itu hanya anjir doang ya');delay(1500);
+  writeln;writeln('*details won’t be included for obvious reasons, but you died*');writeln;delay(1500);
+  writeln;
+  textcolor(4);
+  writeln('THE KARMA ENDING');delay(1500);
+  goto quit;
+  
+action2from3_2:
+  writeln('You: Aduh kepalaku... eh... kamu siapa?!');delay(1500);
+  writeln('...: ...');delay(1500); 
+  writeln('You: Heh! kamu siapa!');delay(1500);
+  writeln('...: ...');delay(1500); 
+  write('You: Hihhh dingin bangettt, kayak kulkas aja kamu');delay(1000);write('.');delay(1000);write('.');delay(1000);write('. ');delay(1500);writeln('Jawab lahhh!');delay(1500);
+  writeln('...: ...');delay(1500);
+  writeln('You: Loe piker loe Thomas Shelby gitu kah???');delay(1500);
+  writeln('...: ...');delay(1500); 
+  writeln('You: Dahlah, au ah, kamu kek sedingin dia aja');delay(1500); 
+  writeln('...: ...');delay(1500); 
+  writeln('You: Sudah susah-susah buka topik, pada akhirnya sama saja, kena ghosting');delay(1500); 
+  writeln('...: ... ...');delay(1500); 
+  writeln('You: Dahlah… sekarang gweh galau… ');delay(1500);
+  writeln('...: ... :(');delay(1500);
+  writeln('You: … *hiks, cri*');delay(1500);
+  writeln('...: *cri also* ');
+  writeln('     Dahlah lu sed banget rasanya, jadi gak mood gw bunuh kamu');delay(1500);
+  writeln('You: Loh anjir kamu pembunuhnya??? Leh weh kemana kamu?');delay(1500); 
+  write('     Lah anjir gweh ditinggal... ');delay(1000);write('lah...');delay(1000);write(' weh... ');delay(1000);writeln('SETIDAKNYA LEPASIN IKATANNYA LAH');delay(1500);
+  writeln;writeln;
+  writeln('GALAU SAVES THE DAY? ENDING');delay(1500);
+  goto quit;
+  
+action2from3_3:
+  writeln;writeln;
+  writeln('You: Ugh… apa… ada di mana aku…');delay(1500);
+  writeln('     Hah, tempat apa ini???');delay(1500);
+  writeln('     Heh, kamu yang menabrak aku tadi ya?!');delay(1500);
+  writeln('...: ... :(');delay(1500);
+  writeln('You: Apa yang mau kamu lakukan kepadaku!');delay(1500); 
+  writeln('...: ... :(');delay(1500);
+  writeln('You: Kamu membawaku ke tempat apa ini!');delay(1500);
+  writeln('...: ... :(');delay(1500);
+  writeln('You: Heh, aku tanya ini!');delay(1500);
+  writeln('...: ... :(');delay(1000);
+  writeln('     Kamu nanyae?');delay(1500);
+  writeln('You: Iyh aku nanya!');delay(1500);
+  writeln('...: Kamu bertanya-tanya?');delay(1500);
+  writeln('You: ...');delay(1000);
+  writeln('...: Rawrrr');delay(1500);
+  writeln('You: ...');delay(1000);
+  writeln('...: Nt kadang-kadang nt');delay(1500);
+  writeln('You: ...');delay(1000);
+  writeln('...: ...');delay(1000);
+  writeln('You: ...');delay(1000); 
+  writeln('...: Rambutnya model apa?');delay(1000);
+  writeln('     Kamu nanyae? rambutnya model apa?');delay(100); 
+  writeln('     Biar aku kasih tahu ya');delay(1000);
+  writeln('     Rambut model aku ini…');delay(1000); 
+  writeln('     Model CEPMEK yah ');delay(1000); 
+  write('     C ');delay(750);write('E ');delay(750);write('P ');delay(750);write('M ');delay(750);write('E ');delay(750);writeln('K');delay(1000);
+  writeln('     Nt kadang-kadang nt');delay(1000);
+  writeln('     Rawrrr');delay(1500);
+  writeln('You: ...');
+  writeln;writeln;
+  textcolor(3);
+  write('THE KAMU NANYAE?');
+  textcolor(23);
+  delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);write(' Yup');delay(1000);write(' that''s all');delay(1000);write('.');delay(1000);write('.');delay(1000);write('.');delay(1000);writeln('not even an ending-');delay(1500);
+  goto quit;
+  
+  quit:
+  textcolor(23);
+  textbackground(0);
+  writeln;
+  writeln;
+  delay(1000);
+  writeln('Hooooo, sudah selesai ya?');
+  delay(1000);
+  writeln('Terasa pendek kan, terlalu pendek?');
+  delay(1000);
+  writeln('Aku juga mikirnya gitu kok');
+  delay(1000);
+  write('So... Mau ngulang lagi? [Yes/No] ');readln(tryagain);
+  case tryagain of
+    'Yes', 'yes', 'ye', 'y', 'Y', 'YE', 'iya', 'ya', 'IYA', 'Iy', 'YA', 'JA', 'ja', 'iy', 'Iya', 'Ja', 'Ye', 'Ya':
+      begin
+        delay(1000);
+        writeln;
+        writeln('Nah Sip !');
+        delay(1000);
+        writeln('Selamat menikmati !');
+        delay(1000);
+        goto opening1;
+      end;
+      
+    'No', 'no','NO','N','n','TIDAK','Tidak','tidak','t','T': 
+      begin
+        delay(1000);
+        writeln;
+        writeln('Aww... :<');
+        delay(1000);
+        writeln('Okay then...');
+        delay(1000);
+        writeln('Thank Youuu !!!');
+        delay(1000);
+        writeln('One last thing tho');
+        delay(1000);
+        goto merrychristmas;
+      end;
+  end;
+  
+merrychristmas:
+  clrscr;
+  char1:=nama[1];
+  char2:=nama[2];
+  char3:=nama[3];
+  char4:=nama[4];
+  char5:=nama[5];
+  char6:=nama[6];
+  char7:=nama[7];
+  char8:=nama[8];
+  char9:=nama[9];
+  char10:=nama[10];
+  char11:=nama[11];
+  char12:=nama[12];
+  char13:=nama[13];
+  char14:=nama[14];
+  char15:=nama[15];
+  char16:=nama[16];
+  char17:=nama[17];
+  char18:=nama[18];
+  char19:=nama[19];
+  char20:=nama[20];
+  char21:=nama[21];
+  char22:=nama[22];
+  char23:=nama[23];
+  char24:=nama[24];
+  char25:=nama[25];
+  char26:=nama[26];
+  char27:=nama[27];
+  char28:=nama[28];
+  char29:=nama[29];
+  char30:=nama[30];
+  char31:=nama[31];
+  char32:=nama[32];
+  char33:=nama[33];
+  char34:=nama[34];
+  char35:=nama[35];
+  char36:=nama[36];
+  char37:=nama[37];
+  char38:=nama[38];
+  char39:=nama[39];
+  char40:=nama[40];
+  char41:=nama[41];
+  char42:=nama[42];
+  char43:=nama[43];
+  char44:=nama[44];
+  char45:=nama[45];
+  char46:=nama[46];
+  char47:=nama[47];
+  char48:=nama[48];
+  char49:=nama[49];
+  char50:=nama[50];
+  char51:=nama[51];
+  char52:=nama[52];
+  char53:=nama[53];
+  char54:=nama[54];
+  char55:=nama[55];
+  
+  for christmasloop:=1 to 100 do
+    begin 
+      case (christmasloop mod 5) of
+       0: 
+       begin
+       
+       end;
+       
+       1:
+       begin
+       
+       end;
+       
+       2:
+       begin
+       
+       end;
+       
+       3:
+       begin
+       
+       end;
+       
+       4:
+       begin
+       
+       end;
+  end;
+end;
+  
+end.
+
+
+
+
+
+
+
+
+
+
+
+

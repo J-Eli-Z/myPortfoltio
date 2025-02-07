@@ -1,0 +1,167 @@
+/* tag */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+    color: #F5C7A9;
+}
+header {
+    text-align: center;
+    color: #DC5F00;
+    border: 1px #EEEEEE solid;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px;
+}
+
+button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #761b02;
+}
+
+/* class */
+.subtitle {
+    font-style: italic;
+    /* transform: translatey(-20px); */
+}
+
+.headerFlex{
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.subFlex {
+    margin-top: -10px;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:3px;
+    width: 100%;
+ }
+
+ .flexColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+
+.flexRowItem {
+    justify-content: center;
+    align-items: stretch;
+ }
+
+.buttonRow {
+    width: 49vw;
+    height: 50px;
+    border: none;
+    color: #F5C7A9;
+    background-color: #D1512D;
+    border-radius: 5px;
+}
+
+.buttonMethod {
+    flex:1;
+    box-sizing: border-box;
+    color: #F5C7A9;
+    background-color: #D1512D;
+    height: 50px;
+    border: none;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1000;
+}
+
+.buttonMethod:hover {
+    background-color: #be2d05;
+}
+
+.mainBody {
+    padding: 5vw;
+    border: solid 1px #EEEEEE;
+}
+
+.rowTitle {
+    gap: 0px;
+    width:100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.box.square{
+    border: #D1512D solid 3px;
+    width: 20vw;
+    height: 20vw;
+}
+
+.box.rectangle{
+    border: #D1512D solid 3px;
+    width: 40vw;
+    height: 20vw;
+}
+
+.left{
+    text-align: left;
+    align-content: start;
+    align-items: start;
+}
+
+.horizontalLine {
+    width: 100%;
+    height: 20px;
+    border-bottom: 1px solid white;
+}
+
+.endButton {
+    width:200px;
+    height: 50px;
+    color:#F5C7A9;
+    background-color: #D1512D;
+    border: none;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+
+.inputBox {
+    width: 75vw;
+    height:5vw;
+}
+
+/* id */
+#defaultMode{ 
+    background-color: #be2d05;
+}
+
+#changedMode {
+    background-color: #D1512D;
+}
+
+#changedMode:hover {
+    background-color: #be2d05;
+}
+
+#shapeName {
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: #F5C7A9;
+    background-color: #D1512D;
+    padding-right: 1vw;
+    text-align-last: right;
+    text-transform: uppercase;
+}
