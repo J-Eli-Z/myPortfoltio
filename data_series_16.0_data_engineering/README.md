@@ -58,4 +58,4 @@ ORDER BY
 LIMIT 9
 ```
 
-## __*NOTE: You could check the queries' results and analyses [here](data_engineering_results.pdf)*__
+### __*NOTE: You could check the queries' results and analyses [here](data_engineering_results.pdf) or by [Google Drive](https://drive.google.com/drive/folders/1akvgnJFXxHZcnNEWBTyt67seBuCi7kfH?usp=sharing) (query results only)*__

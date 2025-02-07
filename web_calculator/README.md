@@ -1,0 +1,2 @@
+# Calculator Web
+Here's a one of my first-ever proper web project I had done. It's a Calculator Web for calculating the total area of a rectangular. Here I finally implemented a backend into my website and Javascript for the behind-the-scenes calculation. I also made this project because I've joined the RevoU Software Engineer Fundamental Course. Nothing much to say about it aside that in this project I finally have some guidance on how to make a web and its proper folder structure that's in the real-life work environment.

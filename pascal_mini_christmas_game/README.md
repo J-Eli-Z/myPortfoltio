@@ -1,0 +1,2 @@
+# Mini Christmas Game
+Here is one of the oldest projects I have using Pascal. I made this when I was still in highschool and decided to spend my before Christmas Holiday to make a code where I can have people play this mini game I made using pascal. It wasn't much. It's just a bunch of ifs and a very long code file (since I'm still a beginner at this point). It's just a simple extensive-form game where it's based on this decision-making tree.
